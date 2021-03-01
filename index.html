@@ -1,0 +1,56 @@
+<style>
+
+  body {
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .on-kawara {
+    color: #fff;
+    font-size: 11vw;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .title {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+</style>
+
+<body>
+  <div class="on-kawara"></div>
+  <a class="title" href="https://en.wikipedia.org/wiki/On_Kawara">after On Kawara</a>
+</body>
+
+<script>
+
+  const d = new Date()
+  const months = [
+                        'JAN',
+                    'FEB',
+                 'MAR',
+             'APR',
+         'MAY',
+     'JUN',
+     'JUL',
+         'AUG',
+             'SEPT',
+                 'OCT',
+                     'NOV',
+                         'DEC'
+  ]
+
+  const month = months[d.getMonth()]
+  const day = d.getDate()
+  const year = d.getFullYear()
+
+  const div = document.querySelector('.on-kawara')
+  div.textContent = `${month}. ${day}, ${year}`
+
+</script>
